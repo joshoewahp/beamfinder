@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "beamfinder"
+version = "0.1.0"
+description = ""
+authors = ["Joshua Pritchard <joshua.pritchard@csiro.au>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+astropy = "^6.1.0"
+pandas = "^2.2.2"
+astroutils = {git = "https://github.com/joshoewahp/astroutils.git", rev = "main"}
+
+[tool.poetry.scripts]
+find-beam = "beamfinder.cli.find_beam:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
